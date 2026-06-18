@@ -23,9 +23,6 @@
 - [Troubleshooting](#troubleshooting)
 - [Commands](#commands)
 - [Resources](#resources)
-- [Contributing](#contributing)
-- [License](#license)
-
 ---
 
 ## Overview
