@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: pandas_jupyter
+    ports:
+      - "8888:8888"      # Jupyter
+      - "4040:4040"      # For future Spark
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=simple123
+    volumes:
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./data:/home/jovyan/work/data
+      - ./scripts:/home/jovyan/work/scripts
+      - ./outputs:/home/jovyan/work/outputs
+    user: root
+    command: start.sh jupyter lab
+    restart: unless-stopped

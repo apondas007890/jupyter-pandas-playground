@@ -1,0 +1,14 @@
+{
+    "name": "Pandas Jupyter Dev Container",
+    "dockerComposeFile": "../docker-compose.yml", // Points to your existing docker-compose file
+    "service": "jupyter", // The name of your service in docker-compose.yml
+    "workspaceFolder": "/home/jovyan/work", // The folder inside the container
+    "customizations": {
+        "vscode": {
+            "extensions": [ // These extensions will be auto-installed in the container
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}
