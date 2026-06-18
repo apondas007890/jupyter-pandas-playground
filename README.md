@@ -305,33 +305,9 @@ When you open a `.ipynb` file in VS Code:
 
 ### 1. Jupyter Lab Interface
 
-![Jupyter Lab](screenshots/jupyter_lab.png)
+![Jupyter Lab](screenshots/jupyter_notebook.png)
 
 *Jupyter Lab running inside Docker container with Python 3 kernel*
-
-### 2. VS Code Dev Container
-
-![VS Code Dev Container](screenshots/vscode_devcontainer.png)
-
-*VS Code connected to Docker container*
-
-### 3. Example Notebook Output
-
-![Example Output](screenshots/example_output.png)
-
-*Sample notebook showing pandas operations*
-
-### 4. File Sync Verification
-
-![File Sync](screenshots/file_sync.png)
-
-*Files syncing between Docker container and Windows host*
-
-### 5. Complete Project Structure
-
-![Project Structure](screenshots/project_structure.png)
-
-*Full project folder structure in VS Code*
 
 ---
 
