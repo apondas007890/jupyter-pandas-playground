@@ -1,6 +1,3 @@
-# 📝 **PROFESSIONAL README.md - Well Organized**
-
-```markdown
 # 🐍 Pandas + Jupyter + Docker Setup
 
 > Complete Data Engineering Environment with Docker, Pandas, and Jupyter
