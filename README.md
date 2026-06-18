@@ -413,37 +413,6 @@ The `scripts/utils.py` provides these helper functions:
 jupyter/datascience-notebook:latest
 ```
 
----
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## License
-
-MIT License - Free to use and modify for any purpose.
-
----
-
-## Show Your Support
-
-If this project helped you, please give it a star on GitHub!
-
----
-
-## Questions?
-
-- Open an issue on GitHub
-- Contact via GitHub Discussions
-
----
-
 ## Future Enhancements
 
 - [ ] Add PostgreSQL container
@@ -454,27 +423,3 @@ If this project helped you, please give it a star on GitHub!
 
 ---
 
-**Happy Data Engineering!**
-
----
-
-*Made for the data engineering community*
-```
-
----
-
-## 🎯 **Summary of Changes Made:**
-
-| Change | Details |
-|--------|---------|
-| **Removed snake icon** | Replaced with clean text header |
-| **Removed batch scripts** | Removed start.bat and stop.bat sections |
-| **Added Step 6-10 content** | Added complete notebook creation and sync verification |
-| **Added Step 11-12** | Added Dev Container setup and kernel selection |
-| **Added Command Cheat Sheet** | Added table with all Docker commands and descriptions |
-| **Better organization** | Cleaner sections with proper spacing |
-| **Professional formatting** | Consistent headers, code blocks, and tables |
-
----
-
-**This README is now complete, professional, and ready to use!** 🚀
