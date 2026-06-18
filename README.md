@@ -330,91 +330,8 @@ When you open a `.ipynb` file in VS Code:
 | **Environment** | Conda base with full data science stack |
 | **Image** | `jupyter/datascience-notebook:latest` |
 
-### Pre-installed Packages
-
-```
-pandas 2.0.3
-numpy 1.24.3
-matplotlib 3.7.2
-seaborn 0.12.2
-scikit-learn 1.3.0
-and many more...
-```
 
 ---
-
-## Usage Examples
-
-### Example 1: Create and Save Sample Data
-
-```python
-# Cell 1: Setup
-import sys
-sys.path.append('/home/jovyan/work/scripts')
-from utils import *
-
-print("All ready!")
-
-# Cell 2: Create sample data
-df = create_sample()
-print("Sample Data:")
-df.head()
-
-# Cell 3: Save to outputs folder
-save_data(df, 'my_sample_data.csv')
-print("Saved!")
-
-# Cell 4: Verify
-import os
-print("\nFiles in outputs:")
-for f in os.listdir('/home/jovyan/work/outputs'):
-    print(f"  - {f}")
-```
-
-### Example 2: Load and Analyze Data
-
-```python
-# Load data from data folder
-df = load_data('your_data.csv')
-
-# Quick statistics
-print("Data Summary:")
-print(df.describe())
-
-# Group by and aggregate
-summary = df.groupby('category').agg({
-    'sales': ['sum', 'mean', 'count']
-})
-
-# Save processed data
-save_data(summary, 'summary_report.csv')
-```
-
-### Example 3: Complete ETL Pipeline
-
-```python
-# 1. EXTRACT - Load raw data
-df = load_data('raw_sales.csv')
-
-# 2. TRANSFORM - Clean and process
-df_clean = df.drop_duplicates()
-df_clean['date'] = pd.to_datetime(df_clean['date'])
-df_clean = df_clean.fillna(df_clean.mean())
-
-# 3. AGGREGATE - Group and summarize
-monthly_sales = df_clean.groupby(
-    df_clean['date'].dt.to_period('M')
-).agg({
-    'sales': 'sum',
-    'quantity': 'sum'
-})
-
-# 4. LOAD - Save results
-save_data(df_clean, 'cleaned_sales.csv')
-save_data(monthly_sales, 'monthly_sales_summary.csv')
-
-print("ETL Pipeline Complete!")
-```
 
 ---
 
@@ -477,34 +394,6 @@ The `scripts/utils.py` provides these helper functions:
 | `docker-compose down -v` | Deletes ALL volumes | Clean everything |
 | `docker ps` | Shows running containers | Check status |
 | `docker images` | Shows downloaded images | Check disk space |
-
-### Quick Commands
-
-```bash
-# Start container in background
-docker-compose up -d
-
-# Stop and remove container
-docker-compose down
-
-# View container logs
-docker-compose logs -f
-
-# Enter container shell
-docker exec -it pandas_jupyter bash
-
-# Rebuild and start
-docker-compose up -d --build
-
-# Remove everything (including volumes)
-docker-compose down -v
-
-# List running containers
-docker ps
-
-# List Docker images
-docker images
-```
 
 ---
 
