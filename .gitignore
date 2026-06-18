@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.ipynb~
+*.pyc
+
+# Docker
+docker-compose.override.yml
+
+# VS Code
+.vscode/
+*.code-workspace
+.devcontainer/
+
+# Data files (don't upload large data)
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.pkl
+*.pickle
+
+# Outputs
+outputs/
+logs/
+data/
+*.log
+
+# Environment
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+*.iml
